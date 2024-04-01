@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Tensors: C++ Library for Tensor Algebra</title>
+    <link type="text/css" rel="stylesheet" href="TensorsC++LibraryforTensorAlgebra_files/style.css">
+    <link type="text/css" rel="stylesheet" href="TensorsC++LibraryforTensorAlgebra_files/prettify.css">
+    <script type="text/javascript" src="TensorsC++LibraryforTensorAlgebra_files/prettify.js"></script>
+    <script type="text/javascript" src="TensorsC++LibraryforTensorAlgebra_files/godocs.js"></script>
+    <script type="text/javascript" src="TensorsC++LibraryforTensorAlgebra_files/mycode.js"></script>
+</head>
+<body onload="prettyPrint()" id="top">
+
+<div id="topbar"><div class="container">
+    <div id="heading"><a href="http://www.nongnu.org/tensors">C++ Tensors Library</a></div>
+    <div id="menu">
+        <a href="https://www.gnu.org/savannah-checkouts/non-gnu/tensors/install.html">Installation</a>
+        <a href="https://www.gnu.org/savannah-checkouts/non-gnu/tensors/doc.html">Documentation</a>
+    </div><!-- menu -->
+</div></div><!-- topbar/container -->
+
+<div id="page"><div id="content">
+
+
+<h1>Tensors – C++ Library for Tensor Algebra</h1>
+
+<p>This library is useful for the implementation of tensor equations mainly using Gibbs'
+direct notation. An orthonormal Cartesian system can be considered and hence expressions in
+index notation can also be handled (e.g. expanded).</p>
+
+<p>The focus is on the implementation of already deduced equations; therefore developments
+in tensor calculus cannot be handled here. Nonetheless, symbolic manipulations can be
+conveniently done using GiNaC.</p>
+
+<p>Note that numerical computations using Tensors directly may be inefficient because C++ operator
+overloadings used in the library that generates temporary copies. We have plans though to use
+the so-called expression templates technique in the future and then avoid temporary
+copies.</p>
+
+<p>The following operators are defined (where T# represents a tensor of #th order):</p>
+
+<pre class="prettyprint"><span class="pln">  </span><span class="pun">*</span><span class="pln"> dot</span><span class="pun">:</span><span class="pln">
+       sc </span><span class="pun">=</span><span class="pln"> T1 </span><span class="pun">*</span><span class="pln"> T1   T1 </span><span class="pun">=</span><span class="pln"> T1 </span><span class="pun">*</span><span class="pln"> T2   T2 </span><span class="pun">=</span><span class="pln"> T1 </span><span class="pun">*</span><span class="pln"> T3   T3 </span><span class="pun">=</span><span class="pln"> T1 </span><span class="pun">*</span><span class="pln"> T4
+       T1 </span><span class="pun">=</span><span class="pln"> T2 </span><span class="pun">*</span><span class="pln"> T1   T2 </span><span class="pun">=</span><span class="pln"> T2 </span><span class="pun">*</span><span class="pln"> T2   T3 </span><span class="pun">=</span><span class="pln"> T2 </span><span class="pun">*</span><span class="pln"> T3   T4 </span><span class="pun">=</span><span class="pln"> T2 </span><span class="pun">*</span><span class="pln"> T4
+       T2 </span><span class="pun">=</span><span class="pln"> T3 </span><span class="pun">*</span><span class="pln"> T1   T3 </span><span class="pun">=</span><span class="pln"> T3 </span><span class="pun">*</span><span class="pln"> T2   T4 </span><span class="pun">=</span><span class="pln"> T3 </span><span class="pun">*</span><span class="pln"> T3
+       T3 </span><span class="pun">=</span><span class="pln"> T4 </span><span class="pun">*</span><span class="pln"> T1   T4 </span><span class="pun">=</span><span class="pln"> T4 </span><span class="pun">*</span><span class="pln"> T2
+
+  </span><span class="pun">%</span><span class="pln"> </span><span class="kwd">double</span><span class="pun">-</span><span class="pln">dot</span><span class="pun">:</span><span class="pln">
+       sc </span><span class="pun">=</span><span class="pln"> T2 </span><span class="pun">%</span><span class="pln"> T2   T1 </span><span class="pun">=</span><span class="pln"> T2 </span><span class="pun">%</span><span class="pln"> T3   T2 </span><span class="pun">=</span><span class="pln"> T2 </span><span class="pun">%</span><span class="pln"> T4
+       T1 </span><span class="pun">=</span><span class="pln"> T3 </span><span class="pun">%</span><span class="pln"> T2   T2 </span><span class="pun">=</span><span class="pln"> T3 </span><span class="pun">%</span><span class="pln"> T3   T3 </span><span class="pun">=</span><span class="pln"> T3 </span><span class="pun">%</span><span class="pln"> T4
+       T2 </span><span class="pun">=</span><span class="pln"> T4 </span><span class="pun">%</span><span class="pln"> T2   T3 </span><span class="pun">=</span><span class="pln"> T4 </span><span class="pun">%</span><span class="pln"> T3   T4 </span><span class="pun">=</span><span class="pln"> T4 </span><span class="pun">%</span><span class="pln"> T4
+
+  </span><span class="pun">&amp;</span><span class="pln"> dyadic</span><span class="pun">:</span><span class="pln">
+       T2 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">T1 </span><span class="pun">&amp;</span><span class="pln"> T1</span><span class="pun">)</span><span class="pln">  T3 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">T1 </span><span class="pun">&amp;</span><span class="pln"> T2</span><span class="pun">)</span><span class="pln">  T4 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">T1 </span><span class="pun">&amp;</span><span class="pln"> T3</span><span class="pun">)</span><span class="pln">
+       T3 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">T2 </span><span class="pun">&amp;</span><span class="pln"> T1</span><span class="pun">)</span><span class="pln">  T4 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">T2 </span><span class="pun">&amp;</span><span class="pln"> T2</span><span class="pun">)</span><span class="pln">
+
+  </span><span class="pun">^</span><span class="pln"> leaf</span><span class="pun">-</span><span class="pln">dyadic </span><span class="pun">(</span><span class="typ">Rijkl</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Lik</span><span class="pun">.</span><span class="typ">Rjl</span><span class="pln"> orthonormal system</span><span class="pun">):</span><span class="pln">
+       T4 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">T2 </span><span class="pun">^</span><span class="pln"> T2</span><span class="pun">)</span><span class="pln">
+
+  </span><span class="pun">|</span><span class="pln"> palm</span><span class="pun">-</span><span class="pln">dyadic </span><span class="pun">(</span><span class="typ">Rijkl</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Lil</span><span class="pun">.</span><span class="typ">Rjk</span><span class="pln"> orthonormal system</span><span class="pun">):</span><span class="pln">
+       T4 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">T2 </span><span class="pun">|</span><span class="pln"> T2</span><span class="pun">)</span></pre>
+
+<p>Additionally, the following operations between tensors and a scalar sc can be programmed:</p>
+
+<pre class="prettyprint"><span class="pln"> </span><span class="typ">Tensor</span><span class="pln"> times scalar</span><span class="pun">:</span><span class="pln">
+      T1 </span><span class="pun">=</span><span class="pln"> T1 </span><span class="pun">*</span><span class="pln"> sc   T2 </span><span class="pun">=</span><span class="pln"> T2 </span><span class="pun">*</span><span class="pln"> sc   T3 </span><span class="pun">=</span><span class="pln"> T3 </span><span class="pun">*</span><span class="pln"> sc   T4 </span><span class="pun">=</span><span class="pln"> T4 </span><span class="pun">*</span><span class="pln"> sc
+
+ </span><span class="typ">Tensor</span><span class="pln"> divided </span><span class="kwd">by</span><span class="pln"> scalar</span><span class="pun">:</span><span class="pln">
+      T1 </span><span class="pun">=</span><span class="pln"> T1 </span><span class="pun">/</span><span class="pln"> sc   T2 </span><span class="pun">=</span><span class="pln"> T2 </span><span class="pun">/</span><span class="pln"> sc   T3 </span><span class="pun">=</span><span class="pln"> T3 </span><span class="pun">/</span><span class="pln"> sc   T4 </span><span class="pun">=</span><span class="pln"> T4 </span><span class="pun">/</span><span class="pln"> sc</span></pre>
+
+
+<h2>Contact<span class="navtop"><a href="#top">[Top]</a></span></h2>
+<ul>
+<li><a href="http://www.cpmech.com/">Computational Mechanics</a></li>
+</ul>
+
+
+</div></div><!-- page/content -->
+
+<div id="copyright">
+Except as noted, this content is licensed under a Creative Commons Attribution 3.0 License.
+</div>
+
+
+
+</body></html>

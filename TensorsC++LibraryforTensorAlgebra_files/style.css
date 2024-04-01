@@ -1,0 +1,380 @@
+body {
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+}
+pre,
+code {
+	font-family: Menlo, monospace;
+	font-size: 14px;
+}
+pre {
+	line-height: 18px;
+}
+pre .comment {
+	color: #34644e;
+}
+pre .highlight,
+pre .highlight-comment,
+pre .selection-highlight,
+pre .selection-highlight-comment {
+    background: #FFFF00;
+}
+pre .selection,
+pre .selection-comment {
+    background: #FF9632;
+}
+pre .ln {
+	color: #999;
+}
+body {
+	color: #222;
+}
+a {
+	color: #34644e;
+	text-decoration: none;
+}
+p,
+pre,
+ul,
+ol {
+	margin: 20px;
+}
+pre {
+    background: #dae0dd;
+	padding: 10px;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+.rootHeading {
+	margin: 20px 0;
+	padding: 0;
+    color: #34644e;
+/* #c0f3db */
+	font-weight: bold;
+}
+h1 {
+	/* font-size: 24px; */
+	font-size: 28px;
+}
+h2 {
+	font-size: 20px;
+	background: #c7e1d5;
+	padding: 2px 5px;
+}
+h3 {
+	font-size: 18px;
+}
+h3,
+h4 {
+	margin: 20px 5px;
+}
+h4 {
+	font-size: 16px;
+}
+.rootHeading {
+	font-size: 20px;
+	margin: 0;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+	text-decoration: underline;
+}
+
+dl {
+	margin: 20px;
+}
+dd {
+	margin: 2px 20px;
+}
+dl,
+dd {
+	font-size: 14px;
+}
+div#nav table td {
+	vertical-align: top;
+}
+
+table.dir th {
+	text-align: left;
+}
+table.dir td {
+	word-wrap: break-word;
+	vertical-align: top;
+}
+
+.alert {
+	color: #AA0000;
+}
+
+div#heading {
+	float: left;
+	margin: 0 0 10px 0;
+	padding: 16px 0;
+	font-size: 26px;
+	font-weight: normal;
+}
+div#heading a {
+	color: #222;
+	text-decoration: none;
+}
+
+div#topbar {
+	background: #c7e1d5;
+}
+
+body {
+	text-align: center;
+}
+div#page,
+div#topbar .container {
+	clear: both;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 900px;
+}
+div#plusone {
+	float: right;
+}
+div#plusoneRoot {
+	float: right;
+}
+
+div#copyright {
+	color: #666;
+	font-size: 14px;
+	margin: 40px 0;
+}
+
+div#menu > a,
+div#menu > input,
+div#learn .buttons a,
+div#blog .read a {
+	padding: 10px;
+
+	text-decoration: none;
+	font-size: 16px;
+
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	border-radius: 9px;
+}
+div#menu > a,
+div#menu > input {
+	border: 1px solid #34644e;
+}
+div#menu > a {
+	color: white;
+	background: #34644e;
+}
+a#start,
+div#learn .buttons a,
+div#blog .read a {
+	color: #222;
+	border: 1px solid #34644e;
+	background: #c7e1d5;
+}
+
+div#menu {
+	padding: 25px 10px 25px 10px;
+	text-align: right;
+}
+div#menu > a {
+	margin-right: 5px;
+	margin-bottom: 10px;
+
+	padding: 10px;
+}
+div#menu > input {
+	position: relative;
+	top: 1px;
+	width: 100px;
+	background: white;
+	color: #222;
+}
+div#menu > input.inactive {
+	color: #999;
+}
+
+div#left {
+	float: left;
+}
+div#right {
+	float: right;
+}
+div#left,
+div#right {
+	width: 415px;
+}
+
+div#learn,
+div#about {
+	padding-top: 20px;
+}
+div#learn h2,
+div#about {
+	margin: 0;
+}
+div#about {
+	font-size: 20px;
+}
+
+div#about {
+	height: 96px;
+}
+div#gopher {
+	background: url(/doc/gopher/frontpage.png) no-repeat;
+	background-position: center top;
+	height: 155px;
+}
+a#start {
+	display: block;
+	padding: 10px;
+
+	text-align: center;
+	text-decoration: none;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+a#start .big {
+	font-weight: bold;
+	font-size: 20px;
+}
+a#start .desc {
+	font-size: 14px;
+	font-weight: normal;
+	margin-top: 5px;
+}
+
+div#learn pre,
+div#learn textarea {
+	padding: 0;
+	margin: 0;
+	font-family: Menlo, monospace;
+	font-size: 14px;
+}
+div#learn .input {
+	padding: 10px;
+	margin-top: 10px;
+	height: 150px;
+
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+div#learn .input textarea {
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	resize: none;
+}
+div#learn .output {
+	border-top: none !important;
+
+	padding: 10px;
+	height: 59px;
+	overflow: auto;
+
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+div#learn .output pre {
+	padding: 0;
+
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+div#learn .input,
+div#learn .input textarea,
+div#learn .output,
+div#learn .output pre {
+	background: #FFFFD8;
+}
+div#learn .input,
+div#learn .output {
+	border: 1px solid #34644e;
+}
+div#learn .buttons {
+	padding: 20px 0 10px 0;
+	text-align: right;
+}
+div#learn .buttons a {
+	height: 16px;
+	margin-left: 5px;
+
+	padding: 10px;
+}
+div#learn .buttons .tour {
+	float: right;
+}
+div#learn .buttons .tour a {
+	margin-right: 0;
+	font-weight: bold;
+}
+
+div#blog,
+div#video {
+	margin-top: 40px;
+}
+div#blog > a,
+div#blog > div,
+div#blog > h2,
+div#video > a,
+div#video > div,
+div#video > h2 {
+	margin-bottom: 10px;
+}
+div#blog .title,
+div#video .title {
+	color: #222;
+	text-decoration: none;
+	display: block;
+	font-size: 20px;
+}
+div#blog .when {
+	color: #666;
+	font-size: 14px;
+}
+div#blog .read {
+	text-align: right;
+}
+
+.exampleHeading { cursor: pointer; }
+.example .collapsed { display: block; }
+.example .expanded { display: none; }
+.exampleVisible .collapsed { display: none; }
+.exampleVisible .expanded { display: block; }
+
+table.codetable { margin-left: auto; margin-right: auto; border-style: none; }
+hr { border-style: none; border-top: 1px solid black; }
+
+.navtop a {
+  font-weight: normal; font-size: 12pt; 
+  float: right; color: #999;
+}
+
+code.bf  { font-weight:bold; }
+code.mth { font-weight:bold; color: #8e0075; }
+code.cls { font-weight:bold; color: #266426; }
