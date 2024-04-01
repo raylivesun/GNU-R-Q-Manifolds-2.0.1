@@ -2,13 +2,7 @@
 
 <!DOCTYPE html>
 <html><head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Tensors: C++ Library for Tensor Algebra</title>
-    <link type="text/css" rel="stylesheet" href="README_files/style.css">
-    <link type="text/css" rel="stylesheet" href="README_files/prettify.css">
-    <script type="text/javascript" src="README_files/prettify.js"></script>
-    <script type="text/javascript" src="README_files/godocs.js"></script>
-    <script type="text/javascript" src="README_files/mycode.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
 </head>
 <body onload="prettyPrint()" id="top">
 
